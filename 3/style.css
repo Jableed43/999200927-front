@@ -1,0 +1,36 @@
+h1, ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tengo un h1 con un span dentro */
+h1 span{
+    color: lightseagreen;
+}
+
+li{
+    /* List-style quita los bullets */
+    list-style: none;
+}
+
+li span{
+    color: lightsalmon;
+}
+
+a{
+    /* Text decoration quita el subrayado de las listas */
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    /* 70% del ancho de la pantalla - viewport width */
+    /* es una medida relativa al tamaño de la pantalla */
+ 
+    width: 70vw;
+}
+
+/* Todo section que tenga dentro una imagen */
+/* Va a tener una imagen que sea el 50% del tamaño de la pantalla */
+section img{
+    width: 50vw;
+}
