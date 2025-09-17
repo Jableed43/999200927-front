@@ -1,3 +1,13 @@
+body{
+    background: #012045;
+    background: linear-gradient(90deg, rgba(1, 32, 69, 1) 0%, rgba(0, 119, 138, 1) 50%, rgba(1, 241, 246, 1) 100%);
+    color: white;
+}
+
+nav{
+    background: black;
+}
+
 h1, ul{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -10,16 +20,18 @@ h1 span{
 li{
     /* List-style quita los bullets */
     list-style: none;
+    color: white;
 }
 
 li span{
     color: lightsalmon;
+    
 }
 
 a{
     /* Text decoration quita el subrayado de las listas */
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 img{
@@ -33,4 +45,31 @@ img{
 /* Va a tener una imagen que sea el 50% del tamaño de la pantalla */
 section img{
     width: 50vw;
+}
+
+/* Selector con id */
+section#home img{
+        box-shadow: 10px 10px 2px #01F1F6;
+}
+
+section#services img{
+        box-shadow: 10px 10px 2px #1954b1;
+}
+
+.section-title{
+    font-family: sans-serif;
+    color: darkorange;
+    font-size: 30px;
+}
+
+.section-title-home{
+    color: tomato;
+}
+
+.parrafo-oscuro{
+    background-color: black;
+    padding: 10px;
+    column-count: 3;
+    column-gap: 40px;
+    border-radius: 15px;
 }
