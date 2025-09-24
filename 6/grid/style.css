@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background-color: goldenrod;
+    border: solid black;
+}
+
+.grid-item{
+    background-color: green;
+    border: solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 40px;
+}
+
+.grid-equal-columns{
+    /* El repeat permite generar varias columnas iguales */
+    /* 4 es la cantidad de columnas, y 1fr es cuanto ocupa cada columna */
+    /* Se ocupa del ancho de la columna */
+    grid-template-columns: repeat(4, 1fr);
+    /* repeat(4, 1fr) -> 1fr 1fr 1fr 1fr */
+}
+
+.grid-fixed-flexible{
+    grid-template-columns: 100px 70px 1fr 2fr;
+}
+
+.grid-equal-rows{
+    /* rows -> se ocupa de el alto height */
+    grid-template-rows: repeat(4, 180px);
+}
+
+
+.container-4{
+    grid-template-columns: 1fr 230px 1fr 2fr;
+    grid-template-rows: repeat(2, 270px);
+}

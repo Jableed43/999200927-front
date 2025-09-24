@@ -1,0 +1,92 @@
+li{
+    border: solid black 2px;
+    margin: 10px 0;
+}
+
+/* Primer hijo */
+li:first-child{
+    color: red;
+    border-color:pink;
+}
+
+/* Last child */
+li:last-child{
+    color: violet;
+    border-color :rgb(102, 169, 73);
+}
+
+/* Primer hijo */
+h2:first-child{
+    color: rgb(76, 48, 169);
+}
+
+/* Last child */
+h2:last-child{
+    color: rgb(165, 193, 73);
+}
+
+/* Podemos decidir a cual elemento hijo afectamos */
+/* Afectamos al tercer hijo */
+li:nth-child(3){
+    color: seagreen;
+    font-size: 24px;
+}
+
+/* Intervalos -  Afecta cada 5 items, el primero */
+li:nth-child(5n+1){
+    /* tachado */
+    text-decoration: line-through;
+}
+
+/* Afectar cada 3 items */
+li:nth-child(3n){
+    text-transform: uppercase;
+    color: blue;
+}
+
+/* Afectar items pares */
+.lista-colorida li:nth-child(even){
+    background-color: lightgreen;
+}
+
+/* Afectar items impares */
+.lista-colorida li:nth-child(odd){
+    background-color: lightcoral;
+}
+
+/* Afectar items pares */
+li:nth-child(even){
+    background-color: whitesmoke;
+}
+
+/* Afectar items impares */
+li:nth-child(odd){
+    background-color: rgb(206, 186, 186);
+}
+
+#elemento-cuatro{
+    color: yellow;
+}
+
+/* Input */
+input{
+    border:rgb(16, 6, 5) 10px solid;
+}
+
+/* Focus -> Enfocado. El input está seleccionado. */
+input:focus{
+    border-color: aqua;
+    box-shadow: 0 0 8px black;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: blue;
+}
+
+div:hover{
+    background-color: red;
+    font-size: 40px
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Ejemplo Completo Flexbox </h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2> Contenedor: 1 - Distribucion de igual espacio entre elementos </h2>
+
+            <div class="flex-container flex-equal-space">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+
+        </section>
+
+
+        <section>
+            <h2> Contenedor: 2 - Columnas de tamaño flexible y tamaño fijo </h2>
+
+            <div class="flex-container">
+                <div class="flex-item fixed">1</div>
+                <div class="flex-item variable">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+
+        </section>
+
+
+                <section>
+            <h2> Contenedor: 3 - Alineacion vertical y horizontal </h2>
+
+            <div class="flex-container flex-align-center">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2> Contenedor: 4 - Orden </h2>
+
+            <div class="flex-container">
+                <div class="flex-item order-1">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item order-2">3</div>
+                <div class="flex-item">4</div>
+            </div>
+
+        </section>
+
+
+                <section>
+
+            <h2> Contenedor: 5 - align SELF </h2>
+
+            <div class="flex-container" style="height: 50vh;">
+                <div class="flex-item" style="align-self: flex-end;" >1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item"  style="align-self: center;">3</div>
+                <div class="flex-item"  style="align-self: flex-start;">4</div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2> Contenedor: 6 - justify SELF </h2>
+
+            <div class="flex-container" style="height: 70vh; flex-direction: column;" >
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item" >3</div>
+                <div class="flex-item" >4</div>
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2> Contenedor: 7 - WRAP </h2>
+
+            <div class="flex-container wrap">
+                <div class="flex-item">1</div>
+                <div class="flex-item">2</div>
+                <div class="flex-item">3</div>
+                <div class="flex-item">4</div>
+            </div>
+
+        </section>
+
+    </main>
+</body>
+</html>

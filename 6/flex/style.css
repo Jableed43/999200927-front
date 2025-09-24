@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container{
+   display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: goldenrod;
+    border: solid black;
+}
+
+.flex-item{
+    background-color: green;
+    border: solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 40px;
+}
+
+.flex-equal-space{
+    justify-content: space-between;
+}
+
+.fixed{
+    width: 100px;
+}
+
+.variable{
+    /* Toma todo el ancho disponible */
+    /* Si hay un flex-grow mayor entre sus hermanos, este 1 es menor */
+    flex-grow: 1;
+}
+
+.flex-align-center{
+    /* X default -> Eje Horizontal */
+    justify-content: center;
+    /* X default -> Eje vertical */
+    align-items: center;
+    /* 70% del alto de pantalla */
+    height: 70vh;
+}
+
+.order-1{
+    order: 1;
+}
+
+.order-2{
+    order: 2;
+}
+
+.wrap{
+    /* Con wrap cada elemento ocupa su ancho definido */
+    flex-wrap: wrap;
+}
+
+.wrap .flex-item{
+    width: 500px;
+}
