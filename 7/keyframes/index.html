@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+</head>
+<body class="quintessential-regular">
+     <article>
+        <h2> Animacion basica </h2>
+        <div class="cuadrado animacion-basica">Sin delay</div>
+        <div class="cuadrado animacion-basica-delay">DELAY</div>
+    </article>
+
+    <article>
+        <!-- Definimos que elementos cambian fuera de la ejecucion -->
+        <h2> Fill mode </h2>
+        <p>Forwards: Al terminar la animacion se queda con el estilo final (TO/100%)</p>
+        <div class="cuadrado fill-forwards">Forwards</div>
+
+        <p> Backwards: Durante el delay, muestra el estilo inicial antes de que empiece a animar, regresa al estado inicial (FROM/0%) </p>
+        <div class="cuadrado fill-backwards">Backwards</div>
+
+        <p> Both: Aplica backwards + forwards. Durante el delay muestra el (FROM/0%) y mantiene el (TO/100%) al final </p>
+        <div class="cuadrado fill-both">Both</div>
+
+        <p> None: No le aplicamos estilos ni antes ni despues, solo durante la animacion </p>
+        <div class="cuadrado fill-none">None</div>
+    </article>
+
+    <article>
+        <h2> Direction </h2>
+        <h4>Normal</h4>
+        <div class="cuadrado direction-normal"> <img src="../assets/mapache.png" alt="mapache"> </div>
+
+        <h4>Reversa</h4>
+        <div class="cuadrado direction-reverse"> <img src="../assets/mapache.png" alt="mapache"> </div>
+
+        <h4>Alternate</h4>
+        <div class="cuadrado direction-alternate"> <img src="../assets/mapache.png" alt="mapache"> </div>
+
+        <h4>Alternate reverse</h4>
+        <div class="cuadrado direction-alternate-reverse"> <img src="../assets/mapache.png" alt="mapache"> </div>
+    </article>
+
+    <article>
+        <h2> Repeticion: Salto </h2>
+        <div class="cuadrado repetir-tres"> <img src="../assets/mario.png" alt="mario"> </div>
+        <div class="cuadrado repetir-cinco"> <img src="../assets/mario.png" alt="mario"> </div>
+    </article>
+
+</body>
+</html>

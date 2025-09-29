@@ -1,0 +1,119 @@
+article{
+    margin: 40px;
+}
+
+.cuadrado{
+    width: 130px;
+    height: 130px;
+    background-color: lightgreen;
+    border: solid black 2px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.rotate{
+    transform: rotate(25deg);
+}
+
+.scale{
+    transform: scale(1.1);
+}
+
+.scale-x-y:hover{
+   transform: scale(1.5, 1.2)
+}
+
+.translate{
+    transform: translate(20px, 25px);
+}
+
+.transicion-padre{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Function timing */
+
+/* Comienza lento, acelera al medio y desacelera al final - Movimiento natural */
+.transicion-ease{
+    transition: all 2s ease;
+}
+
+/* Comienza lento gradualmente hacia el final, va ganando velocidad */
+.transicion-ease-in{
+    transition: all 2s ease-in;
+}
+/* Comienza rapido y desacelera hacia el final */
+.transicion-ease-out{
+    transition: all 2s ease-out;
+}
+/* Comienza lento, acelera al medio y vuelve a descelerar al final - desaceleracion pronunciada */
+.transicion-ease-in-out{
+    transition: all 2s ease-in-out;
+}
+/* Velocidad constante en todo el recorrido */
+.transicion-linear{
+    transition: all 2s linear;
+}
+
+.transicion-ease:hover, .transicion-ease-in:hover, .transicion-ease-out:hover, .transicion-ease-in-out:hover, .transicion-linear:hover{
+    border: solid red 3px;
+    border-radius: 10px;
+    /* 10% + del tamaño original */
+    transform: scale(1.1) rotate(30deg);
+    color: brown;
+}
+
+
+/* Complejos */
+
+/* Latido de corazon */
+
+.corazon img{
+    width: 100%;    
+}
+
+/* Creamos nuestra animacion */
+@keyframes heartbeat{
+    /* Necesita saber en cuales momentos debe cambiar y qué debe cambiar */
+
+    /* Cuando comienza y cuando termina debe tener tamaño original */
+    0%, 100%{ transform: scale(1) }
+    50%{ transform: scale(1.2); }
+}
+
+.corazon:hover{
+    /* infinite -> es un iteration-count que termina y vuelve a empezar */
+    animation: heartbeat 4s infinite;
+}
+
+/* Rainbow */
+/* Con % definimos en cada paso como queremos que cambie nuestra animacion  */
+@keyframes rainbow{
+    0%{ background-color: red; }
+    25%{ background-color: orange; }
+    50%{ background-color: yellow; }
+    75%{ background-color: green; }
+    100%{ background-color: blue; }
+}
+
+.arcoiris{
+    animation: rainbow 2s infinite linear;
+}
+
+/* Spinner */
+
+@keyframes spin {
+    /* En "to" definimos hacia donde se modificaran los estilos */
+    /* En este caso inicialmente partimos de 0deg y terminamos en 360deg */
+    to { transform: rotate(360deg); }
+}
+
+.spinner{
+    border: 5px solid gray;
+    border-top-color: lightgreen;
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+}
+

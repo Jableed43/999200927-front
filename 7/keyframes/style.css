@@ -1,0 +1,130 @@
+article{
+    margin: 40px;
+}
+
+.cuadrado{
+    width: 130px;
+    height: 130px;
+    background-color: lightgreen;
+    border: solid black 2px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 40px;
+}
+
+.cuadrado img{
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animacion-basica-delay{
+    /* animation: fadeIn 2s 1s; */
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.animacion-basica{
+    /* animation: fadeIn 2s 1s; */
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* Fill mode */
+@keyframes crecer {
+    from{
+        transform: scale(0.5);
+        background-color: tomato;
+    }
+
+    to{
+        transform: scale(1.5);
+        background-color: green;
+        color: white;
+    }
+}
+
+/* Al terminar la animacion se queda con el estilo final (TO/100%) */
+.fill-forwards:hover{
+    animation: crecer 2s forwards;
+}
+
+.fill-backwards:hover{
+    animation: crecer 2s 1s backwards;
+}
+
+.fill-both:hover{
+        animation: crecer 2s 1s both;
+}
+
+.fill-none:hover{
+        animation: crecer 2s 1s none;
+}
+
+/* directions */
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.direction-normal:hover{
+    animation: girar 2s infinite normal linear;    
+}
+
+.direction-reverse:hover{
+    animation: girar 2s infinite reverse linear;    
+}
+
+.direction-alternate:hover{
+    animation: girar 2s infinite alternate linear;    
+}
+
+.direction-alternate-reverse:hover{
+    animation: girar 2s infinite alternate-reverse linear;    
+}
+
+/* repetir salto */
+
+@keyframes saltar {
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-300px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.repetir-tres{
+    animation: saltar 1s 3;
+}
+
+.repetir-cinco{
+    animation: saltar 1s 5;
+}
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+} 
