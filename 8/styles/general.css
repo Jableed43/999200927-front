@@ -12,6 +12,14 @@ li{
     list-style: none;
 }
 
+h1{
+    text-align: center;
+}
+
+p{
+    margin-bottom: 0.5rem;
+}
+
 /* Fuentes */
 
 .charm-regular {
@@ -61,6 +69,36 @@ footer{
     bottom: 0;
 }
 
-.index footer{
+.index footer, .catalogo footer, .vendedores footer, .contacto footer{
   position: static;
+}
+
+/* Form */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+legend{
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+}
+
+form div button{
+    padding: 6px;
+    border-radius: 5px;
+}
+
+
+[type=reset] {
+    background-color: red;
+    color: white;
+}
+
+[type=submit] {
+    background-color: green;
+    color: white;
 }
