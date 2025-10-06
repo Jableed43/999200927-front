@@ -4,28 +4,253 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/ef88cf4afb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body class="index">
-    <header> 
-        <nav>
-            <a href="#"> <img src="./assets/img/logo.png" alt="logo"> </a>
-            <ul class="charm-regular">
-                <li> <a href="./index.html">Inicio</a> </li>
-                <li> <a href="./catalogo.html">Catalogo</a> </li>
-                <li> <a href="./vendedores.html">Nuestros vendedores</a> </li>
-                <li> <a href="./contact.html">Contacto</a> </li>
-            </ul>
-        </nav>
+    <!-- Navbar -->
+    <header>
+      <nav>
+        <a href="#">
+          <img class="logo" src="./assets/img/logo.png" alt="logo" />
+        </a>
+        <ul class="charm-regular">
+          <li>
+            <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="./catalogo.html">Catalogo</a></li>
+          <li><a href="./vendedores.html">Nuestros vendedores</a></li>
+          <li>
+            <a href="./contact.html"
+              ><i class="fa-solid fa-phone"></i> Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <div class="portada">
-            <img src="./assets/img/portada.webp" alt="portada">
+      <!-- Carousel -->
+
+      <div class="portada">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+              <img
+                src="./assets/img/portada.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Bienvenidos a Cars</h5>
+                <img class="logo" src="./assets/img/logo.png" alt="logo" />
+                <p>Donde cumplimos tu sueño de ser dueño.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                src="./assets/img/concesionario.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Los mejores vehiculos</h5>
+                <p>Con la mejor calidad y precio.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                src="./assets/img/vendedores.jpeg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Acercate a nuestro local</h5>
+                <p>Nuestros representantes te atenderán como un rey.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+      </div>
+
+      <!-- Acordion -->
+
+      <div class="accordion" id="accordionExample">
+        <h2>Porque nos eligen</h2>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Nuestra pasión por los autos
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Nuestros clientes nos eligen por una razón sencilla: compartimos
+              su pasión por los autos. No solo vendemos vehículos, sino que
+              también vivimos y respiramos el mundo automotor. Desde los
+              clásicos que evocan nostalgia hasta los modelos más modernos con
+              tecnología de punta, nuestro equipo se mantiene al día con las
+              últimas novedades para ofrecer un asesoramiento genuino y experto.
+              Entendemos que la compra de un auto es una decisión importante y
+              por eso, nos dedicamos a guiarte con la misma emoción y entusiasmo
+              que si estuviéramos eligiendo nuestro propio vehículo.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Un servicio que va más allá de la venta
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Sabemos que la experiencia no termina cuando te llevas el auto.
+              Por eso, nuestros clientes confían en nosotros por el servicio
+              posventa excepcional que ofrecemos. Desde mantenimientos
+              rutinarios hasta reparaciones más complejas, nuestro taller está
+              equipado con la tecnología más avanzada y personal altamente
+              capacitado. Nos aseguramos de que tu auto reciba el cuidado que
+              merece, garantizando su rendimiento y longevidad. Nuestro
+              compromiso es forjar una relación a largo plazo, brindando
+              tranquilidad y confianza en cada kilómetro que recorras.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              La confianza de una inversión segura
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              La transparencia es nuestro pilar fundamental. Nuestros clientes
+              nos eligen porque saben que cada transacción es clara y honesta.
+              Ofrecemos tasaciones justas, historiales de vehículos verificados
+              y opciones de financiamiento claras y sin sorpresas. Nos
+              esforzamos por eliminar las incertidumbres, proporcionando toda la
+              información necesaria para que tomes una decisión informada.
+              Porque al final del día, tu elección es una inversión, y nuestra
+              misión es asegurarnos de que sea una inversión segura y
+              satisfactoria.
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+        </li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

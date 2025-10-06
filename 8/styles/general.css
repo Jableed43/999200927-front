@@ -25,3 +25,42 @@ li{
   font-weight: 700;
   font-style: normal;
 }
+
+/* Header */
+
+header{
+    background-color: #9d020a;
+}
+
+header nav a img.logo, .carousel-caption img.logo{
+    width: 100px;
+    height: auto;
+}
+
+header nav{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+header nav a{
+    color: #e3ecf6;
+    font-size: 20px;
+}
+
+/* Footer */
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.index footer{
+  position: static;
+}
