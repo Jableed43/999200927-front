@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul class="lista-desordenada">
+      <li class="list-item">Soy un list item 1</li>
+      <li class="list-item" id="item-especial">Soy un list item 2</li>
+      <li class="list-item">Soy un list item 3</li>
+      <li class="list-item">Soy un list item 4</li>
+      <li class="list-item">Soy un list item 5</li>
+      <li class="list-item">Soy un list item 6</li>
+    </ul>
+
+    <p class="texto"></p>
+
+    <div class="contenedor-magico"></div>
+
+    <button onclick="crearElementoListaFinal()">
+      Añadir elemento al final de la lista
+    </button>
+    <button onclick="crearElementoListaInicial()">
+      Añadir elemento al inicio de la lista
+    </button>
+    <button onclick="eliminarUltimoElemento()">
+      Elimina el ultimo elemento
+    </button>
+    <button onclick="eliminarPrimerElemento()">
+      Elimina el primer elemento
+    </button>
+    <button onclick="modificarTexto()">Modificar texto</button>
+    <button onclick="crearElementos()">Usar la caja magica</button>
+    <button onclick="agregarAtributo()">
+      Añadir una clase al item especial
+    </button>
+    <button onclick="agregarAtributoToggle()">Prender/Apagar</button>
+    <button onclick="agregarClase()">Agregar clase</button>
+    <button onclick="removerClase()">Remover clase</button>
+    <button onclick="quitarAtributo()">Quitar atributo clase</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>

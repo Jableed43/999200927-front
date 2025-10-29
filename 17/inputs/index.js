@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // si usas querySelector los selectores son iguales que en css (. para clase, # para id, los tags se escriben x nombre)
     // getElementById solo escribis el nombre del id
-    let text = document.querySelector("#text")
-    let color = document.querySelector("#color")
-    let fontSize = document.getElementById("fontSize")
-    let bgColor = document.querySelector("#bgColor")
-    let resultado = document.querySelector("#resultado")
-    let body = document.querySelector("body")
+    const text = document.querySelector("#text")
+    const color = document.querySelector("#color")
+    const fontSize = document.getElementById("fontSize")
+    const bgColor = document.querySelector("#bgColor")
+    const resultado = document.querySelector("#resultado")
+    const body = document.querySelector("body")
 
     // Funciones
     // Actualizar el texto (basado en el input escribo en el parrafo)

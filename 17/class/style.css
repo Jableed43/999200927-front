@@ -1,0 +1,13 @@
+.verde{
+    color: green;
+}
+
+.rojo{
+    color: red;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.bold{
+    font-weight: bolder;
+}
