@@ -4,6 +4,53 @@ const addTaskBtn = document.getElementById("addTaskBtn")
 const taskList = document.getElementById("taskList")
 const taskHelp = document.getElementById("task-help")
 
+// EXTRA - persistencia con localStorage
+function guardarTareas() {
+    const tareas = []
+
+    // recorremos los items de la lista
+    const items = taskList.querySelectorAll(".task-item")
+    items.forEach(item => {
+        // task-text es la clase del span
+        const texto = item.querySelector(".task-text").textContent
+        // tomamos solos los que en su lista de clases tienen completed, es decir estan completadas
+        // contains retorna booleano
+        const completada = item.classList.contains("completed")
+        tareas.push({
+            texto: texto,
+            completada: completada
+        })
+    })
+    // Guardamos el array como JSON - formato que es full texto
+    localStorage.setItem("tareas", JSON.stringify(tareas))
+}
+
+// Funcion para cargar las tareas desde localStorage
+function cargarTareas() {
+    // Obtenemos las tareas desde localStorage
+    const tareasGuardadas = localStorage.getItem("tareas")
+    console.log(tareasGuardadas)
+    if(tareasGuardadas){
+        // De string (JSON) -> javascript
+        const tareas = JSON.parse(tareasGuardadas)
+        tareas.forEach(tarea => {
+            // Creamos el li para cada tarea
+            const listItem = document.createElement("li")
+            listItem.classList.add("task-item")
+            // si en la key completada lleva true, añadimos la clase completed
+            if(tarea.completada){
+                listItem.classList.add("completed")
+            }
+            const taskSpan = createTaskSpan(tarea.texto)
+            const deleteBtn = createDeleteButton()
+
+            listItem.appendChild(taskSpan)
+            listItem.appendChild(deleteBtn)
+            taskList.appendChild(listItem)
+        })
+    }
+}
+
 // Tarea 2. Crear boton de eliminar dentro de la tarea
 // Elimina la tarea
 function createDeleteButton() {
@@ -20,6 +67,8 @@ function createDeleteButton() {
     // eliminamos el elemento padre, el cual es un li
     deleteBtn.addEventListener("click", function() {
         this.parentNode.remove()
+        // guardamos que borramos una tarea
+        guardarTareas()
     })
     return deleteBtn
 }
@@ -41,6 +90,8 @@ function createTaskSpan(text) {
         // this -> se refiere al elemento sobre el cual estamos trabajando
         // toggle - alterna entre agregar y quitar la clase completed
         this.parentNode.classList.toggle("completed")
+        // guardamos despues de completar/descompletar
+        guardarTareas()
     })
     return taskSpan
 }
@@ -101,8 +152,12 @@ function agregarTarea() {
 
     // Enfoca el cursor en el input para facilitar el agregado de mas tareas
     taskInput.focus()
+    guardarTareas()
 }
 
 // Evento para el boton de  agregar
 // Escuchamos el evento de click y si sucede se ejecuta agregarTarea
 addTaskBtn.addEventListener("click", agregarTarea)
+
+// Cargar tareas al iniciar la pagina o refrescarla
+cargarTareas()
