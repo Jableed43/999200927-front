@@ -37,8 +37,8 @@ class Libro{
     genero
     autor
 
-    constructor(nombre, ISBN, genero, autor){
-        this.nombre = nombre
+    constructor(titulo, ISBN, genero, autor){
+        this.titulo = titulo
         this.ISBN = ISBN
         this.genero = genero
         this.autor = autor
