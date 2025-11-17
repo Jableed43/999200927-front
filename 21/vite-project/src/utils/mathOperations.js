@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 export const mathOperations = {
   suma: (a, b) => {
-    return a + b;
+    return a + b;      
   },
   resta: (a, b) => {
     if( a < b ){
