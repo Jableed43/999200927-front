@@ -12,7 +12,7 @@ function Mapeo() {
 
   return (
     <>
-      <section>
+         <section>
         <h3> Mapeo de array </h3>
         {/* Cuando mapeas necesitas un contenedor dentro del cual vas a mapear
         Tambien necesitas elementos hijos sobre los que vas a mapear */}
