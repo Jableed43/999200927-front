@@ -7,6 +7,8 @@ las acciones, corresponden a los reducers
 
 const initialState = []
 
+// Slice tiene el nombre del estado, el estado inicial y los reducers (metodos que modifican el estado)
+
 const taskSlice = createSlice({
     // nombre que va a aparecer en las acciones
     name: "tasks",
