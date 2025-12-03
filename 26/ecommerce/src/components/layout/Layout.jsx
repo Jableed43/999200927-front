@@ -10,6 +10,7 @@ function Layout() {
       <header>
         <nav>
             <NavLink to="/" > Inicio </NavLink>
+            <NavLink to="/products"> Productos </NavLink>
         </nav>
       </header>
 

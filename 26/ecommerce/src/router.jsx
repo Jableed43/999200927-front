@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./components/pages/Home"
+import Products from "./components/pages/Products";
 
 // Que tiene siempre una ruta?
 // path y element
@@ -14,6 +15,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/products",
+        element: <Products />
       },
       {
         path: "*",
