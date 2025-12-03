@@ -3,7 +3,7 @@ import useGetCharacters from '../hooks/useGetCharacters'
 
 function Characters() {
 
-    const {characters, error, loading, onNext, onPrevious } = useGetCharacters()
+    const {characters, error, loading, onNext, onPrevious, info } = useGetCharacters()
     console.log(characters)
     // Rederizado condicional
     // ERROR 2: no se aconseja utilizar error directamente
@@ -21,6 +21,16 @@ function Characters() {
         </>
     }
 
+   const handleNext = () => {
+    onNext()
+    window.scrollTo({top: 0, behavior: 'smooth'})
+   }
+
+    const handlePrev = () => {
+    onPrevious()
+    window.scrollTo({top: 0, behavior: 'smooth'})
+   }
+
 
   return (
     <div>
@@ -35,6 +45,9 @@ function Characters() {
             </div>
         )) }
       </div>
+      {/* && significa que ambos terminos deben ser true */}
+      { info.prev && <button onClick={handlePrev} > Ir Atras </button> }
+      { info.next && <button onClick={handleNext} > Ir Adelante </button> }
     </div>
   )
 }

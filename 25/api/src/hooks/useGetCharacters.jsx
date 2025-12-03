@@ -13,14 +13,14 @@ const useGetCharacters = () => {
     const [info, setInfo] = useState({})
 
     // Es asincronico
-    const fetchCharacters = async (url) => {
+    const getCharacters = async (url) => {
         setError(null)
         setLoading(true)
 
         try {
             // ERROR 1: la url se debe pasar por parametro
             // fetch ejecuta un metodo HTTP, en este caso es un GET
-            const respuesta = await fetch(`${url}/character`)
+            const respuesta = await fetch(`${url}`)
 
             // Validamos que la respuesta no haya sido positiva
             if(!respuesta.ok){
@@ -46,11 +46,11 @@ const useGetCharacters = () => {
     }
 
     // Dos caminos
-    // 1. Ejecutar fetchCharacters aqui usando useEffect
+    // 1. Ejecutar getCharacters aqui usando useEffect
     useEffect(() => {
         if(API_URL){
             // ERROR 1: la url se debe pasar por parametro
-            fetchCharacters(API_URL)
+            getCharacters(`${API_URL}/character`)
         } else {
             setError(new Error("Falta la url para realizar fetch"))
         }
@@ -58,13 +58,13 @@ const useGetCharacters = () => {
 
     const onPrevious = () => {
         if(info.prev){
-            fetchCharacters(info.prev)
+            getCharacters(info.prev)
         }
     }
 
      const onNext = () => {
         if(info.next){
-            fetchCharacters(info.next)
+            getCharacters(info.next)
         }
     }
 
@@ -77,7 +77,7 @@ const useGetCharacters = () => {
         onNext,
     }
 
-    // 2. Brindar la funcion fetchCharacters para ser ejecutada de forma externa
+    // 2. Brindar la funcion getCharacters para ser ejecutada de forma externa
 
 }
 
