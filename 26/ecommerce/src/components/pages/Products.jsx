@@ -68,6 +68,7 @@ function Products() {
             <p> Stock disponible: {product.stock} </p>
 
             <button onClick={(e) => handleEditProduct(e, product.id) } > Editar </button>
+            {/* Falta eliminacion del producto */}
           </div>
         ))}
       </div>
