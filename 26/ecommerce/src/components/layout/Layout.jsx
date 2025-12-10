@@ -11,6 +11,7 @@ function Layout() {
         <nav>
             <NavLink to="/" > Inicio </NavLink>
             <NavLink to="/products"> Productos </NavLink>
+            <NavLink to="/products/create"> Crear Producto </NavLink>
         </nav>
       </header>
 
