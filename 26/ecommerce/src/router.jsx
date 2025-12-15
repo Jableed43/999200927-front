@@ -4,6 +4,8 @@ import Home from "./components/pages/Home"
 import Products from "./components/pages/Products";
 import CreateProductPage from "./components/pages/CreateProductPage";
 import EditProductPage from "./components/pages/EditProductPage";
+import RegisterUserPage from "./components/pages/RegisterUserPage";
+import LoginUserPage from "./components/pages/LoginUserPage";
 
 // Que tiene siempre una ruta?
 // path y element
@@ -19,16 +21,24 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/products",
+        path: "/product",
         element: <Products />
       },
       {
-        path: "/products/create",
+        path: "/product/create",
         element: <CreateProductPage />
       },
       {
-        path: "/products/edit/:id",
+        path: "/product/edit/:id",
         element: <EditProductPage />
+      },
+      {
+        path: "/user/register",
+        element: <RegisterUserPage />
+      },
+      {
+        path: "/user/login",
+        element: <LoginUserPage />
       },
       {
         path: "*",

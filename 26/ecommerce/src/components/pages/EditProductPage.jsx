@@ -16,6 +16,7 @@ function EditProductPage() {
   const { error, putProduct } = usePutProduct();
   const { error: getByIdError, getProductById } = useGetProductById();
 
+  // el hook useParams permite capturar path params de la url, las cuales tienen ":" definidos en el router
   const { id } = useParams();
   const navigate = useNavigate();
 
